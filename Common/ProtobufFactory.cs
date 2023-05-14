@@ -6,9 +6,9 @@ namespace Common;
 
 public class ProtobufFactory
 {
-
-    private static Dictionary<Opcode, Type> _types = new();
-    private static Dictionary<Opcode, MessageParser> _parsers = new();
+    private static readonly Dictionary<Opcode, Type> Opcode2TypeDict = new();
+    private static readonly Dictionary<Opcode, MessageParser> Opcode2ParserDict = new();
+    private static readonly Dictionary<string, MessageParser> Name2ParserDict = new();
     static ProtobufFactory()
     {
         Assembly assembly = Assembly.GetAssembly(typeof(GetPlayerTokenReq))!;
@@ -29,9 +29,10 @@ public class ProtobufFactory
                 var parser = getParserMethod?.Invoke(classInstance, new object[]{});
                 // Console.WriteLine("found parser for type:" + type.Name);
                 if (parser is null) continue;
+                Name2ParserDict.TryAdd(type.Name, (parser as MessageParser)!);
                 if (!Enum.TryParse(type.Name, out Opcode opcode)) continue;
-                _parsers.TryAdd(opcode, (parser as MessageParser)!);
-                _types.TryAdd(opcode, type);
+                Opcode2ParserDict.TryAdd(opcode, (parser as MessageParser)!);
+                Opcode2TypeDict.TryAdd(opcode, type);
 
             }
         }
@@ -39,10 +40,11 @@ public class ProtobufFactory
     
     public static MessageParser? GetPacketTypeParser(Opcode opcode)
     {
-        if (_parsers.TryGetValue(opcode, out var parser))
-        {
-            return parser;
-        }
-        return null;
+        return Opcode2ParserDict.TryGetValue(opcode, out var parser) ? parser : null;
+    }
+
+    public static MessageParser? GetPacketTypeParser(string name)
+    {
+        return Name2ParserDict.TryGetValue(name, out var parser) ? parser : null;
     }
 }

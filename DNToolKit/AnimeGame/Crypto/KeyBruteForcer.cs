@@ -11,43 +11,49 @@ namespace DNToolKit.AnimeGame.Crypto
         /// Brute force the seed by guessing over the request data.
         /// </summary>
         /// <param name="requestData">The data to guess the seed from.</param>
-        /// <param name="sendTime">The time at which the request was sent.</param>
         /// <param name="serverKey">The key received from the server.</param>
-        /// <returns>The brute forced key to decrypt requests with. Otherwise <see langword="null"/>.</returns>
-        public static MtKey? BruteForce(byte[] requestData, long sendTime, ulong serverKey)
+        /// <param name="sendTimes">The timestamps of requests to use.</param>
+        /// <returns>A tuple of the brute forced key to decrypt requests with and the guessed seed.
+        /// Otherwise, a tuple of <see langword="null"/>.</returns>
+        public static (MtKey?, long?) BruteForce(byte[] requestData, ulong serverKey, params long?[] sendTimes)
         {
             // Check against already guessed seeds
             foreach (var oldSeed in PrevSeeds)
             {
                 var key = Guess(requestData, oldSeed, serverKey, 1000);
                 if (key != null)
-                    return key;
+                    return (key, oldSeed);
             }
 
-            // Check against our arguments with timeStamp offset
-            // Effective range of the loop is -1499..1499
-            for (var count = 0; count < 3000; count++)
+            foreach (var sendTime in sendTimes)
             {
-                // Special case: 1 would result in 0 again, which we already checked for count = 0
-                if (count == 1)
-                    continue;
+                if (sendTime is null) continue;
+                // Check against our arguments with timeStamp offset
+                // Effective range of the loop is -1499..1499
+                for (var count = 0; count < 3000; count++)
+                {
+                    // Special case: 1 would result in 0 again, which we already checked for count = 0
+                    if (count == 1)
+                        continue;
 
-                // Alternate between negative and positive offset
-                var offset = count >> 1;
-                if ((count & 1) > 0)
-                    offset = -offset;
+                    // Alternate between negative and positive offset
+                    var offset = count >> 1;
+                    if ((count & 1) > 0)
+                        offset = -offset;
 
-                var key = Guess(requestData, sendTime + offset, serverKey, 1000);
-                if (key == null)
-                    continue;
+                    var seed = sendTime.Value + offset;
+                    var key = Guess(requestData, seed, serverKey, 1000);
+                    if (key == null)
+                        continue;
 
-                // Save found seed
-                PrevSeeds.Add(sendTime + offset);
-                return key;
+                    // Save found seed
+                    PrevSeeds.Add(seed);
+                    return (key, seed);
+                }
             }
 
             // If we didn't find the correct key
-            return null;
+            return (null, null);
         }
 
         /// <summary>
@@ -83,7 +89,7 @@ namespace DNToolKit.AnimeGame.Crypto
 
                 // Return key for found seed
                 Log.Debug("Seed found! {seed}", seed);
-                Log.Debug("Params: @{requestData} : {timeStamp} : {serverKey} : x{i}", testBuffer, timeStamp, serverKey, i);
+                Log.Verbose("Params: @{requestData} : {timeStamp} : {serverKey} : x{i}", testBuffer, timeStamp, serverKey, i);
 
                 return MtKey.FromBuffer(full);
             }

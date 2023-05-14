@@ -1,4 +1,5 @@
 ﻿using DNToolKit.AnimeGame.Models;
+using DNToolKit.Configuration;
 using DNToolKit.Configuration.Models;
 using DNToolKit.Extensions;
 using DNToolKit.Net;
@@ -15,7 +16,7 @@ namespace DNToolKit.AnimeGame
     class AnimeGamePacketHandler : UdpHandler
     {
         private readonly AnimeGamePacketProcessor _processor;
-
+        private readonly Config _config;
         private KCP? _client;
         private KCP? _server;
 
@@ -27,16 +28,20 @@ namespace DNToolKit.AnimeGame
         /// The event to signal, that the key was not recoverable.
         /// </summary>
         public event EventHandler? KeyNotRecovered;
+        public event EventHandler<long>? KeyFound;
+        public event EventHandler? Disconnected;
 
         /// <summary>
         /// Create a new instance of <see cref="AnimeGamePacketHandler"/>.
         /// </summary>
         /// <param name="sniffer">The <see cref="PCapSniffer"/> to receive raw packets to handle from.</param>
         /// <param name="config">The config to setup communication.</param>
-        public AnimeGamePacketHandler(PCapSniffer sniffer, SniffConfig config) : base(sniffer)
+        public AnimeGamePacketHandler(PCapSniffer sniffer, Config config) : base(sniffer)
         {
-            _processor = new AnimeGamePacketProcessor(config);
+            _config = config;
+            _processor = new AnimeGamePacketProcessor(config.SniffConfig);
             _processor.PacketProcessed += AnimeGamePacketProcessed;
+            _processor.KeyFound += OnKeyFound;
         }
 
         /// <summary>
@@ -85,6 +90,7 @@ namespace DNToolKit.AnimeGame
                         if (_client is null)
                             break;
 
+                        Disconnected?.Invoke(this, EventArgs.Empty);
                         Log.Information("{Sender} disconnected.", sender);
                         Log.Warning("Relaunch your client to continue capturing packets!");
 
@@ -168,6 +174,18 @@ namespace DNToolKit.AnimeGame
         private void OnKeyNotRecovered()
         {
             KeyNotRecovered?.Invoke(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// Save the sendTime of the successful bruteforce.
+        /// </summary>
+        /// <param name="sender">The sender object.</param>
+        /// <param name="sendTime">The timestamp of the successful bruteforce.</param>
+        private void OnKeyFound(object? sender, long sendTime)
+        {
+            _config.SniffConfig.LastValidReqSentTime = sendTime;
+            ConfigurationProvider.SaveConfig(_config);
+            KeyFound?.Invoke(sender, sendTime);
         }
     }
 }

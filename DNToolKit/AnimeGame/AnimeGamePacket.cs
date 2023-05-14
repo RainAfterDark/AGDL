@@ -46,12 +46,21 @@ namespace DNToolKit.AnimeGame
         /// <summary>
         /// The sender of the message.
         /// </summary>
-        public Sender Sender { get; private init; }
+        public Sender Sender { get; }
+        
+        /// <summary>
+        /// The parent of the packet, if it was nested
+        /// </summary>
+        public AnimeGamePacket? ParentPacket { get; set; }
+        /// <summary>
+        /// The children of the packet, if it contained nested data
+        /// </summary>
+        public List<AnimeGamePacket> ChildPackets { get; } = new();
 
-        private AnimeGamePacket(Opcode packetType, byte[]? metaDataBytes, byte[] protoBufBytes)
+        private AnimeGamePacket(Opcode packetType, byte[]? metaDataBytes, byte[] protoBufBytes, Sender sender)
         {
             PacketType = packetType;
-
+            Sender = sender;
             MetadataBytes = metaDataBytes;
             ProtoBufBytes = protoBufBytes;
 
@@ -62,6 +71,14 @@ namespace DNToolKit.AnimeGame
             // Parse ProtoBuf data
             var parser = ProtobufFactory.GetPacketTypeParser(packetType);
             ProtoBuf = parser?.ParseFrom(protoBufBytes);
+        }
+        
+        private AnimeGamePacket(MessageParser parser, ByteString protoBufBytes, Sender sender)
+        {
+            PacketType = Opcode.None;
+            Sender = sender;
+            ProtoBufBytes = protoBufBytes.ToByteArray();
+            ProtoBuf = parser.ParseFrom(protoBufBytes);
         }
 
         /// <summary>
@@ -97,10 +114,7 @@ namespace DNToolKit.AnimeGame
             var protoBufBytes = data.AsSpan(10 + metaDataLength, protoDataLength).ToArray();
 
             // Create packet model
-            return new AnimeGamePacket(packetType, metaDataBytes, protoBufBytes)
-            {
-                Sender = sender
-            };
+            return new AnimeGamePacket(packetType, metaDataBytes, protoBufBytes, sender);
         }
 
         /// <summary>
@@ -125,7 +139,19 @@ namespace DNToolKit.AnimeGame
         /// <returns>The parsed <see cref="AnimeGamePacket"/>.</returns>
         public static AnimeGamePacket ParseRaw(byte[] data, byte[]? meta, uint cmdId, Sender sender)
         {
-            return new AnimeGamePacket((Opcode)cmdId, meta, data) { Sender = sender };
+            return new AnimeGamePacket((Opcode)cmdId, meta, data, sender);
+        }
+
+        /// <summary>
+        /// Parse a raw <see cref="ByteString"/> message, given a parser.
+        /// </summary>
+        /// <param name="data">The raw <see cref="ByteString"/>.</param>
+        /// <param name="parser">The parser to use.</param>
+        /// <param name="sender">The sender of the parent packet.</param>
+        /// <returns>The parsed <see cref="AnimeGamePacket"/>.</returns>
+        public static AnimeGamePacket ParseRaw(ByteString data, MessageParser parser, Sender sender)
+        {
+            return new AnimeGamePacket(parser, data, sender);
         }
     }
 }

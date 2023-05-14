@@ -20,17 +20,27 @@ namespace DNToolKit.Configuration.Models
         /// <summary>
         /// Declares, if packets should be persisted to <see cref="PacketRecordPath"/>.
         /// </summary>
-        public bool PersistPackets { get; set; } = true;
+        public bool PersistPackets { get; set; } = false;
 
         /// <summary>
         /// Declares, if packets should be loaded from <see cref="PacketRecordPath"/>.
         /// </summary>
-        public bool LoadPackets { get; set; } = true;
+        public bool LoadPackets { get; set; } = false;
 
         /// <summary>
         /// Declares, if the user would like to manually set which network interface to listen from.
         /// (Useful for if the default doesn't work for you)
         /// </summary>
         public bool ChooseInterface { get; set; } = false;
+
+        /// <summary>
+        /// Declares, if combat/ability invocations should be parsed as packets.
+        /// </summary>
+        public bool ParseInvocations { get; set; } = false;
+
+        /// <summary>
+        /// The last valid request sent time, to be reused for next launch.
+        /// </summary>
+        public long? LastValidReqSentTime { get; set; } = null;
     }
 }

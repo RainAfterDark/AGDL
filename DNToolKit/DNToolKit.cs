@@ -20,20 +20,24 @@ namespace DNToolKit
         /// The event to record every packet received without prior filtering.
         /// </summary>
         public event EventHandler<AnimeGamePacket>? PacketReceived;
+        public event EventHandler<long>? KeyFound; 
+        public event EventHandler? Disconnected; 
 
         /// <summary>
         /// Creates a new instance of <see cref="DNToolKit"/>.
         /// </summary>
-        /// <param name="config">The <see cref="SniffConfig"/> to setup the packet sniffing internally.</param>
-        public DNToolKit(SniffConfig config)
+        /// <param name="config">The <see cref="Config"/> to setup the packet sniffing internally.</param>
+        public DNToolKit(Config config)
         {
-            _sniffer = new PCapSniffer(config.ChooseInterface,PCapFilter_);
+            _sniffer = new PCapSniffer(config.SniffConfig.ChooseInterface, PCapFilter_);
             _packetHandler = new AnimeGamePacketHandler(_sniffer, config);
 
             _cts = new CancellationTokenSource();
 
             _packetHandler.PacketReceived += PacketHandler_PacketReceived;
             _packetHandler.KeyNotRecovered += PacketHandler_KeyNotRecovered;
+            _packetHandler.KeyFound += (sender, sendTime) => KeyFound?.Invoke(sender, sendTime);
+            _packetHandler.Disconnected += (sender, _) => Disconnected?.Invoke(sender, EventArgs.Empty);
         }
 
         /// <summary>

@@ -4,6 +4,7 @@ using PacketDotNet;
 using Serilog;
 using SharpPcap;
 using SharpPcap.LibPcap;
+using Spectre.Console;
 
 namespace DNToolKit.Net
 {
@@ -13,6 +14,7 @@ namespace DNToolKit.Net
     public class PCapSniffer : IDisposable
     {
         private readonly string? _filterExpression;
+        private readonly bool _chooseInterface;
 
         private LibPcapLiveDevice? _pCapDevice;
         private LinkLayers _layers;
@@ -22,8 +24,6 @@ namespace DNToolKit.Net
         /// </summary>
         public bool IsDisposed { get; private set; }
 
-        private bool choose;
-
         /// <summary>
         /// The event to pass on network packets.
         /// </summary>
@@ -32,12 +32,12 @@ namespace DNToolKit.Net
         /// <summary>
         /// Creates a new instance of <see cref="PCapSniffer"/>.
         /// </summary>
-        /// <param name="choose">Whether or not the network interface will be automatically determined, or manually chosen.</param>
+        /// <param name="chooseInterface">Whether or not the network interface will be automatically determined, or manually chosen.</param>
         /// <param name="filterExpression">The filter to setup the sniffer.</param>
         /// <remarks>Refer to https://www.tcpdump.org/manpages/pcap-filter.7.html for valid filter expression syntax.</remarks>
-        public PCapSniffer(bool choose, string? filterExpression = null)
+        public PCapSniffer(bool chooseInterface, string? filterExpression = null)
         {
-            this.choose = choose;
+            _chooseInterface = chooseInterface;
             _filterExpression = filterExpression;
         }
 
@@ -53,9 +53,8 @@ namespace DNToolKit.Net
                 return;
 
             Log.Information("SharpPcap {Version}, StartLiveCapture", (object)Pcap.SharpPcapVersion);
-
             
-            (_pCapDevice, _layers) = choose ? ChoosePcapDevice():GetPcapDevice();
+            (_pCapDevice, _layers) = _chooseInterface ? ChoosePcapDevice() : GetPcapDevice();
             if (_pCapDevice == null)
                 throw new InvalidOperationException("No PCap device found.");
 
@@ -103,7 +102,7 @@ namespace DNToolKit.Net
             pCapDevice.Filter = _filterExpression;
             pCapDevice.StartCapture();
 
-            Log.Information("-- Listening on {Name} {Description}", pCapDevice.Name, pCapDevice.Description);
+            Log.Information("Listening on {Name} {Description}", pCapDevice.Name, pCapDevice.Description);
         }
 
         /// <summary>
@@ -146,7 +145,7 @@ namespace DNToolKit.Net
                 }
                 catch (PcapException ex)
                 {
-                    Log.Fatal(ex, "Could not open PCap Device.");
+                    Log.Fatal(ex, "Could not open PCap Device");
                     continue;
                 }
 
@@ -161,35 +160,27 @@ namespace DNToolKit.Net
         }
         private static (LibPcapLiveDevice, LinkLayers) ChoosePcapDevice()
         {
-            //todo: maybe not this lol
-            NetworkInterface[] networkInterfaces = NetworkInterface.GetAllNetworkInterfaces();
-            Console.WriteLine();
-            Console.WriteLine("The following devices are available on this machine:");
-            Console.WriteLine("----------------------------------------------------");
-            Console.WriteLine();
-            int b = 0;
             var interfaces = PcapInterface.GetAllPcapInterfaces();
-            foreach (PcapInterface allPcapInterface in interfaces)
-            {
+            var selectedInterface = AnsiConsole.Prompt(
+                new SelectionPrompt<PcapInterface>()
+                    .Title("Please select a device for capture:")
+                    .UseConverter(pi => $"{pi.Name} - {pi.Description}")
+                    .AddChoices(interfaces)
+                    .PageSize(5)
+            );
+            if (selectedInterface is null) return GetPcapDevice();
+            var device = new LibPcapLiveDevice(selectedInterface);
             
-                Console.WriteLine("{0})\t{1} - {2}",b,allPcapInterface.Name, allPcapInterface.Description);
-                b++;
+            try
+            {
+                device.Open();
             }
-        
-
-            int i = 0;
-            Console.WriteLine();
-            Console.Write("-- Please choose a device to capture: ");
-            i = int.Parse(Console.ReadLine());
-        
-
- 
-
-            var device = new LibPcapLiveDevice(interfaces[i]);
-            device.Open();
-        
-        
-        
+            catch (PcapException ex)
+            {
+                Log.Fatal(ex, "Could not open PCap Device");
+                return ChoosePcapDevice();
+            }
+            
             return (device, device.LinkType);
         }
 

@@ -17,7 +17,7 @@ namespace DNToolKit.AnimeGame
         public AnimeGamePacketRecorder(string persistPath)
         {
             var persistDir = Path.GetDirectoryName(persistPath);
-            if (!Directory.Exists(persistDir))
+            if (persistDir is not null && !Directory.Exists(persistDir))
                 Directory.CreateDirectory(persistDir);
 
             _persistStream = !File.Exists(persistPath) ? File.Create(persistPath) : File.Open(persistPath, FileMode.Open);
