@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 2115
+// Name: ENENLFCFCKN
+message SeaLampTakePhaseRewardReq {
+    uint32 activity_id = 8;
+    uint32 phase_id = 6;
+}
+

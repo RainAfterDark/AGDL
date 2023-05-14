@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "AsterLargeDetailInfo.proto";
+
+// CmdId: 2030
+// Name: EEGMMGOBAGB
+message AsterLargeInfoNotify {
+    AsterLargeDetailInfo info = 1;
+}
+

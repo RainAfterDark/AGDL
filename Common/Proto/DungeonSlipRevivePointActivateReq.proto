@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 958
+// Name: BMGILOEIPPD
+message DungeonSlipRevivePointActivateReq {
+    uint32 slip_revive_point_id = 13;
+}
+

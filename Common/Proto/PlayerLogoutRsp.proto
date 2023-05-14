@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 156
+// Name: OPGJBDNICCH
+message PlayerLogoutRsp {
+    int32 retcode = 2;
+}
+

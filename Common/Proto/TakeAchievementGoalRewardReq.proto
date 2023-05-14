@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 2665
+// Name: MEAKOLJPEIM
+message TakeAchievementGoalRewardReq {
+    repeated uint32 id_list = 9;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: LEODFLGAMBL
+message ChessCardInfo {
+    uint32 card_id = 8;
+    uint32 effect_stack = 6;
+}
+

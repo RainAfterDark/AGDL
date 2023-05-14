@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 24485
+// Name: JIOMNFBEAPF
+message TeamChainDungeonInfoNotify {
+    uint32 stage_id = 1;
+    repeated uint32 skill_no_list = 5;
+}
+

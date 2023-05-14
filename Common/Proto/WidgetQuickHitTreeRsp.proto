@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 3169
+// Name: DIIBHMNKDJK
+message WidgetQuickHitTreeRsp {
+    int32 retcode = 3;
+}
+

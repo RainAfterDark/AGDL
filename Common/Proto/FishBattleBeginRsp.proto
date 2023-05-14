@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 5836
+// Name: OOHDMAHCFMH
+message FishBattleBeginRsp {
+    int32 retcode = 11;
+}
+

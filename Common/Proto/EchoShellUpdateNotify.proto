@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8192
+// Name: ANNCMJAEJKA
+message EchoShellUpdateNotify {
+    uint32 shell_id = 11;
+}
+

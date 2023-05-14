@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8928
+// Name: LKJPJBKJAAA
+message LanternRiteTakeSkinRewardRsp {
+    int32 retcode = 13;
+}
+

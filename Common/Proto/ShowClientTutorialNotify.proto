@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 3129
+// Name: IEIOPBLDBDM
+message ShowClientTutorialNotify {
+    uint32 tutorial_id = 4;
+}
+

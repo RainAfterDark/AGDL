@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8586
+// Name: GEOJJNICOPJ
+message WinterCampTriathlonRestartReq {
+    uint32 gallery_id = 6;
+}
+

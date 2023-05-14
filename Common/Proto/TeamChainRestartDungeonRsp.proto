@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 21962
+// Name: ODJNBPIOAOK
+message TeamChainRestartDungeonRsp {
+    int32 retcode = 4;
+}
+

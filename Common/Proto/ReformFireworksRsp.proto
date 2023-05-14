@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 6065
+// Name: HAMCKHKPGKG
+message ReformFireworksRsp {
+    int32 retcode = 9;
+}
+

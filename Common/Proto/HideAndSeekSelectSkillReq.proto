@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8030
+// Name: LLHLPMOHHKF
+message HideAndSeekSelectSkillReq {
+    repeated uint32 skill_list = 7;
+}
+

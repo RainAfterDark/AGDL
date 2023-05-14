@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 2106
+// Name: INHEBNAKIKD
+message RestartEffigyChallengeRsp {
+    int32 retcode = 3;
+}
+

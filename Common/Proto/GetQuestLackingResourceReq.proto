@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 418
+// Name: LEFCJKGALNG
+message GetQuestLackingResourceReq {
+    uint32 quest_id = 5;
+}
+

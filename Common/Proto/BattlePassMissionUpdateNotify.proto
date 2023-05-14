@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "BattlePassMission.proto";
+
+// CmdId: 2616
+// Name: KOOPEIGFOEN
+message BattlePassMissionUpdateNotify {
+    repeated BattlePassMission mission_list = 1;
+}
+

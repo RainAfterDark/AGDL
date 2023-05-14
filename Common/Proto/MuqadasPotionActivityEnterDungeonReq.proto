@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 24826
+// Name: CNOPNEPFGHG
+message MuqadasPotionActivityEnterDungeonReq {
+    uint32 level_id = 14;
+}
+

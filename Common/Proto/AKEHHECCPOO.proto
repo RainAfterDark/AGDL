@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 4809
+// Name: AKEHHECCPOO
+message AKEHHECCPOO {
+    string share_code = 4;
+}
+

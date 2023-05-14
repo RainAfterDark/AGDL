@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8061
+// Name: HIIAOANGENE
+message MichiaeMatsuriStartBossChallengeRsp {
+    int32 retcode = 13;
+}
+

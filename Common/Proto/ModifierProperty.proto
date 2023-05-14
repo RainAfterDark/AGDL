@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "AbilityString.proto";
+
+// Name: MHKLKDOLLLF
+message ModifierProperty {
+    AbilityString key = 12;
+    float value = 14;
+}
+

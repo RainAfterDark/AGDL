@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: MPLIKJPIIPG
+message ChatChannelInfo {
+    uint32 channel_id = 11;
+    bool is_shield = 5;
+}
+

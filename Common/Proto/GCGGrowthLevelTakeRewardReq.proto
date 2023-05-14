@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 7787
+// Name: ILDNNMNCLJM
+message GCGGrowthLevelTakeRewardReq {
+    uint32 level = 8;
+}
+

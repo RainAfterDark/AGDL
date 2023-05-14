@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: LIAEEPNLLPA
+message GCGMsgPass {
+    uint32 controller_id = 3;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: BKINFCJMFNH
+message BlitzRushStage {
+    uint32 open_time = 11;
+    bool is_open = 15;
+}
+

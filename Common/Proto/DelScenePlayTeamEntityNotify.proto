@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 3234
+// Name: PCCLMIBJNGN
+message DelScenePlayTeamEntityNotify {
+    repeated uint32 del_entity_id_list = 3;
+    uint32 scene_id = 7;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 6086
+// Name: CPENMHPGPLO
+message LaunchFireworksRsp {
+    int32 retcode = 8;
+}
+

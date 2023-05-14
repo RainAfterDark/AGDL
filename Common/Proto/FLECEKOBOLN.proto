@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 5094
+// Name: FLECEKOBOLN
+message FLECEKOBOLN {
+    int32 retcode = 5;
+}
+

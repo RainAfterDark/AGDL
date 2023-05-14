@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 644
+// Name: GIMLJCFLMLA
+message CombineDataNotify {
+    repeated uint32 combine_id_list = 9;
+}
+

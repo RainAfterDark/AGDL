@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: KCKOEEDAIMB
+message VectorPlane {
+    float x = 1;
+    float y = 2;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 988
+// Name: HJADKLKFJAB
+message DungeonCandidateTeamChangeAvatarRsp {
+    int32 retcode = 3;
+}
+

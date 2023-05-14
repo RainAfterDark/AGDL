@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "RegionSearchInfo.proto";
+
+// CmdId: 5609
+// Name: HFOJLNAMPCI
+message RegionSearchNotify {
+    repeated RegionSearchInfo region_search_list = 15;
+    uint32 uid = 1;
+}
+

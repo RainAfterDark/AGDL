@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 6208
+// Name: GDJDDMOALHA
+message BackPlayCustomDungeonOfficialReq {
+    uint32 room_id = 2;
+}
+

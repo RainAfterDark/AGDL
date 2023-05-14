@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "WidgetGadgetData.proto";
+
+// CmdId: 4288
+// Name: EBEGNJPHGMG
+message WidgetGadgetAllDataNotify {
+    repeated WidgetGadgetData widget_gadget_data = 10;
+}
+

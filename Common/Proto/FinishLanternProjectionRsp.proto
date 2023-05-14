@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8348
+// Name: MCCOAEMCDDM
+message FinishLanternProjectionRsp {
+    int32 retcode = 7;
+}
+

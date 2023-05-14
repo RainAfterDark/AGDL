@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: PINICBEFNME
+message QuestGlobalVar {
+    int32 value = 6;
+    uint32 key = 4;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 368
+// Name: AAELEBEPLGM
+message EvtLocalGadgetOwnerLeaveSceneNotify {
+    uint32 entity_id = 2;
+}
+

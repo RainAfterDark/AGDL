@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 1175
+// Name: FLHNPKJFAKG
+message ServerCombatEndNotify {
+    repeated uint32 combat_end_type_list = 4;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: CFBKCJCMFEP
+message GravenInnocenceCarveStageInfo {
+    bool is_open = 13;
+    uint32 stage_id = 11;
+}
+

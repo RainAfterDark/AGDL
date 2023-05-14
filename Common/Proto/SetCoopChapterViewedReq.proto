@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 1968
+// Name: IFLJBALCLEO
+message SetCoopChapterViewedReq {
+    uint32 chapter_id = 5;
+}
+

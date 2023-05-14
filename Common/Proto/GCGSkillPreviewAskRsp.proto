@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 7775
+// Name: LCDMONCCJOG
+message GCGSkillPreviewAskRsp {
+    int32 retcode = 15;
+}
+

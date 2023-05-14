@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 2076
+// Name: HLMACGMHFJK
+message SeaLampTakeContributionRewardReq {
+    uint32 config_id = 9;
+    uint32 activity_id = 11;
+}
+

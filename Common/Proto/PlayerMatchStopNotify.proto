@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "MatchReason.proto";
+
+// CmdId: 4176
+// Name: KOFDGOHGOHH
+message PlayerMatchStopNotify {
+    uint32 host_uid = 10;
+    MatchReason reason = 12;
+}
+

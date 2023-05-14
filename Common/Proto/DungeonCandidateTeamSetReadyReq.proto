@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 928
+// Name: BKMLEDPDPGP
+message DungeonCandidateTeamSetReadyReq {
+    bool is_ready = 1;
+}
+

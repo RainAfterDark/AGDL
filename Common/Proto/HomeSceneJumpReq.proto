@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 4844
+// Name: EHCFNNNFKNA
+message HomeSceneJumpReq {
+    bool is_enter_room_scene = 14;
+}
+

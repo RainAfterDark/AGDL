@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 24889
+// Name: DCJEGFPGKEF
+message DCJEGFPGKEF {
+    uint32 level_id = 15;
+}
+

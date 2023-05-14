@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 4548
+// Name: HDEMDCMNGBA
+message SetFriendEnterHomeOptionRsp {
+    int32 retcode = 2;
+}
+

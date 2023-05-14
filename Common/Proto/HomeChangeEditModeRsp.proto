@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 4701
+// Name: NCADHAEALEL
+message HomeChangeEditModeRsp {
+    bool is_enter_edit_mode = 8;
+    int32 retcode = 15;
+}
+

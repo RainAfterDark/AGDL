@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 638
+// Name: JDPJOAOAIMC
+message SetIsAutoUnlockSpecificEquipRsp {
+    int32 retcode = 8;
+}
+

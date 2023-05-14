@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 24118
+// Name: MHJHENLEPEC
+message LanV3BoatGameStartSingleRsp {
+    int32 retcode = 12;
+}
+

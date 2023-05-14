@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: EGEPEDLDPDF
+message EGEPEDLDPDF {
+    bool LOODAJFNACE = 8;
+}
+

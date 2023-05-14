@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8599
+// Name: NGDHJCIAKMC
+message SetLimitOptimizationNotify {
+    bool is_active = 4;
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "FireworksLaunchSchemeData.proto";
+
+// CmdId: 6022
+// Name: AMCLCEJGJNF
+message LaunchFireworksReq {
+    FireworksLaunchSchemeData scheme_data = 14;
+}
+

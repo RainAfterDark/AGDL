@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8014
+// Name: LHENIEHBMFB
+message BartenderCancelOrderReq {
+    uint32 quest_id = 8;
+}
+

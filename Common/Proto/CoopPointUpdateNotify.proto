@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "CoopPoint.proto";
+
+// CmdId: 1981
+// Name: MMAKIBIBFJF
+message CoopPointUpdateNotify {
+    CoopPoint coop_point = 11;
+}
+

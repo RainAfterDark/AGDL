@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 21299
+// Name: LOMGKIHPBEO
+message LanV3BoatInterruptSettleStageRsp {
+    int32 retcode = 13;
+}
+

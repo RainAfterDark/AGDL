@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 7814
+// Name: PIEMILPJLAL
+message GCGDSTakeCardProficiencyRewardReq {
+    uint32 card_id = 14;
+    uint32 reward_index = 13;
+}
+

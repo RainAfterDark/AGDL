@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "WorldRoutineTypeInfo.proto";
+
+// CmdId: 3517
+// Name: FKBFEKJHBHI
+message WorldRoutineTypeRefreshNotify {
+    WorldRoutineTypeInfo world_routine_type = 9;
+}
+

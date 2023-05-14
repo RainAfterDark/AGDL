@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 870
+// Name: HBGMHEGICBP
+message LiveEndNotify {
+    uint32 live_id = 4;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "MuqadasPotionLevelData.proto";
+
+// Name: CBACBHDFJEJ
+message MuqadasPotionActivityDetailInfo {
+    repeated MuqadasPotionLevelData muqadas_potion_level_data_list = 1;
+}
+

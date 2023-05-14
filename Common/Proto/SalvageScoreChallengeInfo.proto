@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: DJGOABOOOHI
+message SalvageScoreChallengeInfo {
+    uint32 max_score = 4;
+    uint32 salvage_challenge_id = 10;
+}
+

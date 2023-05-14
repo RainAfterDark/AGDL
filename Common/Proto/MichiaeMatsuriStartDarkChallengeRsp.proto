@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8021
+// Name: JFCHJNHIHOO
+message MichiaeMatsuriStartDarkChallengeRsp {
+    int32 retcode = 8;
+}
+

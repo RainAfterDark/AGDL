@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 3956
+// Name: PNOIFAIDBDL
+message MechanicusCloseNotify {
+    uint32 mechanicus_id = 11;
+}
+

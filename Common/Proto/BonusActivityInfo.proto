@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: JAEINPOMBHJ
+message BonusActivityInfo {
+    uint32 bonus_activity_id = 13;
+    uint32 state = 1;
+}
+

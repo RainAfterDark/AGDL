@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "ItemParam.proto";
+
+// CmdId: 8199
+// Name: OLNMIFOCKHO
+message SpiceActivityProcessFoodReq {
+    repeated ItemParam normal_food_list = 13;
+}
+

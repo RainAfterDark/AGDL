@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 6497
+// Name: BFFEMLKIMGD
+message BFFEMLKIMGD {
+    uint32 play_index = 8;
+}
+

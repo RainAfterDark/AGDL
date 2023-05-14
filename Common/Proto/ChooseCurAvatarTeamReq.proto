@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 1699
+// Name: LCBAAKNNLKF
+message ChooseCurAvatarTeamReq {
+    uint32 team_id = 11;
+}
+

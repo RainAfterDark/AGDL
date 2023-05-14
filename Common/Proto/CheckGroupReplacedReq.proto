@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 3497
+// Name: OACAFCNIOLD
+message CheckGroupReplacedReq {
+    repeated uint32 group_id_list = 2;
+}
+

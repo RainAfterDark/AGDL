@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8364
+// Name: MGGNIBPAOEK
+message MistTrialSelectAvatarAndEnterDungeonRsp {
+    int32 retcode = 11;
+    uint32 trial_id = 1;
+}
+

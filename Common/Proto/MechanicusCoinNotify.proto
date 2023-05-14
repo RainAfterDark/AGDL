@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 3976
+// Name: EKHNMCNAMGN
+message MechanicusCoinNotify {
+    uint32 mechanicus_id = 2;
+    uint32 coin = 14;
+}
+

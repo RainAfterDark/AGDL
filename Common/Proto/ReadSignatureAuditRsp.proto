@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 4038
+// Name: FFHJPNCHNMD
+message ReadSignatureAuditRsp {
+    int32 retcode = 15;
+}
+

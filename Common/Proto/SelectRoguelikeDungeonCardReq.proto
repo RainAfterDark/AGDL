@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8062
+// Name: FPJDOJOCALO
+message SelectRoguelikeDungeonCardReq {
+    uint32 card_id = 14;
+}
+

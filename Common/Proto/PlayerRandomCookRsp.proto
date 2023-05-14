@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 197
+// Name: LHLIDAIOFCC
+message PlayerRandomCookRsp {
+    int32 retcode = 4;
+}
+

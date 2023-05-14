@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 1907
+// Name: LHPFEHGIOIP
+message TakeInvestigationRewardReq {
+    uint32 id = 6;
+}
+

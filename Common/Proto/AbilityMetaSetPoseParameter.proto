@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "AnimatorParameterValueInfoPair.proto";
+
+// Name: BGGGDNNJKOE
+message AbilityMetaSetPoseParameter {
+    AnimatorParameterValueInfoPair value = 2;
+}
+

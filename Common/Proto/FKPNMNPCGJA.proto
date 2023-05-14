@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "AISnapshotEntityData.proto";
+
+// Name: FKPNMNPCGJA
+message FKPNMNPCGJA {
+    repeated AISnapshotEntityData AGINKGKAOKH = 6;
+}
+

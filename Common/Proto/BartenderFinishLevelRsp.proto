@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8513
+// Name: EFPHPEGLJGN
+message BartenderFinishLevelRsp {
+    uint32 level_id = 11;
+    int32 retcode = 9;
+}
+

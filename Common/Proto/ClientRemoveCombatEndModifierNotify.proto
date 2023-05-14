@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 1146
+// Name: CENAHNNLLGI
+message ClientRemoveCombatEndModifierNotify {
+    repeated uint32 combat_end_type_list = 5;
+}
+

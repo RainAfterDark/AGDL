@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 7526
+// Name: BPLAIDOBNMG
+message GCGDSCardBackUnlockNotify {
+    uint32 card_back_id = 10;
+}
+

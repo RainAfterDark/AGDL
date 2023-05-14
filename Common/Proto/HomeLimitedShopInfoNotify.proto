@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "HomeLimitedShopInfo.proto";
+
+// CmdId: 4825
+// Name: JCKDHCAPEIA
+message HomeLimitedShopInfoNotify {
+    HomeLimitedShopInfo shop_info = 9;
+}
+

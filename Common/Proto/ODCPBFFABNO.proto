@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 21648
+// Name: ODCPBFFABNO
+message ODCPBFFABNO {
+    int32 retcode = 3;
+}
+

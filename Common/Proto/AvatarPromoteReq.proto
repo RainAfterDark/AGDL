@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 1609
+// Name: BMOIDOOEEFB
+message AvatarPromoteReq {
+    uint64 guid = 6;
+}
+

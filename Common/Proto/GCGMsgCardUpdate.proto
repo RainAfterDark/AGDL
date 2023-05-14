@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "GCGCard.proto";
+
+// Name: JBFOKFOHFML
+message GCGMsgCardUpdate {
+    GCGCard card = 4;
+}
+

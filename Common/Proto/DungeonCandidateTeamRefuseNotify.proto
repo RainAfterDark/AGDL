@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 948
+// Name: GAKNPPDEMAH
+message DungeonCandidateTeamRefuseNotify {
+    uint32 player_uid = 15;
+}
+

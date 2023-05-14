@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "PBNavMeshPoly.proto";
+import "Vector.proto";
+
+// Name: ICDELFCCFKG
+message PBNavMeshTile {
+    repeated Vector vecs = 12;
+    repeated PBNavMeshPoly polys = 10;
+}
+

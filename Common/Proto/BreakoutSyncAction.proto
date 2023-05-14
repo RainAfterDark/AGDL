@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "BreakoutAction.proto";
+
+// Name: LMHDABKFMGE
+message BreakoutSyncAction {
+    BreakoutAction action = 1;
+}
+

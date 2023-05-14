@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8162
+// Name: GGJLNGDHBEJ
+message StartRogueDiaryRoomRsp {
+    int32 retcode = 15;
+}
+

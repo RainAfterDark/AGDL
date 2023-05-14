@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: PCABGJIBAOE
+message TeamChainChooseAvatarInfo {
+    bool is_trial_avatar = 5;
+    uint32 avatar_id = 1;
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 5504
+// Name: HDHPLGOCHCP
+message HDHPLGOCHCP {
+    uint32 gallery_id = 15;
+    uint32 target_id = 3;
+}
+

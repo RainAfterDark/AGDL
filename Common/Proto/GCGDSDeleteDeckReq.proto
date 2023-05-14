@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 7398
+// Name: IMOCMGPFFLJ
+message GCGDSDeleteDeckReq {
+    uint32 deck_id = 7;
+}
+

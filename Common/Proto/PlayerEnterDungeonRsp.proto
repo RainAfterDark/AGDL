@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 976
+// Name: JPNMIFILGBP
+message PlayerEnterDungeonRsp {
+    uint32 dungeon_id = 12;
+    uint32 point_id = 10;
+    int32 retcode = 1;
+}
+

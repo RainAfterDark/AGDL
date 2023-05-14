@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: NAKACCCBMGO
+message TanukiTravelLevelData {
+    uint32 route_id = 12;
+    bool is_open = 7;
+    bool is_finish = 11;
+}
+

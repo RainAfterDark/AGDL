@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 1634
+// Name: BBLHLAFMPOK
+message AvatarChangeElementTypeRsp {
+    int32 retcode = 15;
+}
+

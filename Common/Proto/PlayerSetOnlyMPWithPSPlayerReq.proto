@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 1842
+// Name: DEGIPACCNOF
+message PlayerSetOnlyMPWithPSPlayerReq {
+    bool is_only = 15;
+}
+

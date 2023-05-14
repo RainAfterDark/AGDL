@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 3515
+// Name: KKPPKDHGKJI
+message WorldRoutineTypeCloseNotify {
+    uint32 routine_type = 8;
+}
+

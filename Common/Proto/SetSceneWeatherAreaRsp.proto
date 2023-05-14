@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 230
+// Name: PINOHACCOJL
+message SetSceneWeatherAreaRsp {
+    int32 retcode = 15;
+}
+

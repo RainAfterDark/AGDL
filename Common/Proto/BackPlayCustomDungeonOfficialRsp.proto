@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 6241
+// Name: IKEAMPBDILA
+message BackPlayCustomDungeonOfficialRsp {
+    int32 retcode = 2;
+}
+

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: OKPKNAAHJPO
+message CutSceneExtraParam {
+    repeated double detail_param_list = 1;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: DFOAIKFHIOB
+message SceneGalleryCoinCollectInfo {
+    uint32 DKAPCHHJPCM = 9;
+    uint32 EEBBADCOGNG = 3;
+}
+

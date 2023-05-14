@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "DynamicLayerNodes.proto";
+
+// Name: LAEELAKKFLC
+message DynamicNodes {
+    repeated DynamicLayerNodes nodes = 10;
+}
+

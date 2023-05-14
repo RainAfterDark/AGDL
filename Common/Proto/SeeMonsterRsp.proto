@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 214
+// Name: BDKHPEKDFCA
+message SeeMonsterRsp {
+    int32 retcode = 9;
+}
+

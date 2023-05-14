@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "DCJBJCDFAAE.proto";
+import "KMNPJIFBGJD.proto";
+
+// Name: JEIFKDDEDEE
+message JEIFKDDEDEE {
+    bool HHHCHKPECLL = 5;
+    repeated DCJBJCDFAAE JEAPENKJEGB = 6;
+    repeated uint32 BNKMHJMPCPJ = 2;
+    repeated KMNPJIFBGJD ADIJKDFNCFA = 3;
+}
+

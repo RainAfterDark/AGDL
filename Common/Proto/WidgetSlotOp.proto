@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: GOHGODJALDD
+enum WidgetSlotOp {
+    WIDGET_SLOT_OP_ATTACH = 0;
+    WIDGET_SLOT_OP_DETACH = 1;
+}
+

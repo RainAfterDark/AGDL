@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 21876
+// Name: NNOJLDPDPIE
+message NNOJLDPDPIE {
+    int32 retcode = 1;
+}
+

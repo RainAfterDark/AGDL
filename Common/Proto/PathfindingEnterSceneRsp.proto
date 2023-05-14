@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 2356
+// Name: MHKMFCNKEJI
+message PathfindingEnterSceneRsp {
+    int32 retcode = 6;
+}
+

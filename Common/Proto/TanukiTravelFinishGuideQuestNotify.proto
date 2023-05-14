@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8503
+// Name: LNPAAPEMOMK
+message TanukiTravelFinishGuideQuestNotify {
+    uint32 activity_id = 1;
+}
+

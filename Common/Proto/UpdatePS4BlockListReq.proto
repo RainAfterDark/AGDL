@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 4054
+// Name: IJLJNBINDBI
+message UpdatePS4BlockListReq {
+    repeated string psn_id_list = 5;
+}
+

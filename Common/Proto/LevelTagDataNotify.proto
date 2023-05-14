@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 3263
+// Name: KDOMBPOPLDK
+message LevelTagDataNotify {
+    repeated uint32 level_tag_id_list = 6;
+}
+

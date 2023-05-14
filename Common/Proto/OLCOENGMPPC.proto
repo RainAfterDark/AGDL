@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 24985
+// Name: OLCOENGMPPC
+message OLCOENGMPPC {
+    int32 retcode = 13;
+}
+

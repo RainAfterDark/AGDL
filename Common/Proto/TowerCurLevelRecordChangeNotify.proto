@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "TowerCurLevelRecord.proto";
+
+// CmdId: 2489
+// Name: DNLLHGCKDOC
+message TowerCurLevelRecordChangeNotify {
+    TowerCurLevelRecord cur_level_record = 7;
+}
+

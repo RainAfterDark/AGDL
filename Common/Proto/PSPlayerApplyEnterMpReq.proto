@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 1831
+// Name: CCBPPMJBDGE
+message PSPlayerApplyEnterMpReq {
+    string target_psn_id = 3;
+}
+

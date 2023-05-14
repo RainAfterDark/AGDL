@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8275
+// Name: AOKLAJLBEPJ
+message ViewLanternProjectionLevelTipsRsp {
+    int32 retcode = 1;
+}
+

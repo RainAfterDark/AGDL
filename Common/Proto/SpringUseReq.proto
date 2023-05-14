@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 1660
+// Name: KLHPMOOFDCO
+message SpringUseReq {
+    uint64 guid = 13;
+}
+

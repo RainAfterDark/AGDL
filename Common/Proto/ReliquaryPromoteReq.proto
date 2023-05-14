@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 695
+// Name: LCEDADIFDHE
+message ReliquaryPromoteReq {
+    uint64 target_guid = 4;
+    uint64 item_guid = 6;
+}
+

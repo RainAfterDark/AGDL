@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 951
+// Name: BPLIBLDAAJK
+message DungeonGetStatueDropRsp {
+    int32 retcode = 9;
+}
+

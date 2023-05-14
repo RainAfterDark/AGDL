@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "BlossomScheduleInfo.proto";
+
+// CmdId: 2716
+// Name: GCPJBEOOFLA
+message WorldOwnerBlossomScheduleInfoNotify {
+    BlossomScheduleInfo schedule_info = 6;
+}
+

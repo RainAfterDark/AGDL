@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8155
+// Name: PIDFKFDDNOJ
+message ViewLanternProjectionTipsRsp {
+    int32 retcode = 11;
+}
+

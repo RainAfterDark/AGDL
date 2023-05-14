@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "QuestGlobalVar.proto";
+
+// CmdId: 435
+// Name: OKMLFKDCPMD
+message QuestGlobalVarNotify {
+    repeated QuestGlobalVar var_list = 4;
+}
+

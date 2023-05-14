@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8648
+// Name: HLMGLPKCHGE
+message WinterCampTakeExploreRewardRsp {
+    int32 retcode = 14;
+    uint32 id = 5;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8604
+// Name: CJFFCHLKFMD
+message DisableRoguelikeTrapNotify {
+    uint32 card_id = 3;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 4175
+// Name: EACOAPHAKOH
+message ServerTryCancelGeneralMatchNotify {
+    uint32 match_id = 5;
+}
+

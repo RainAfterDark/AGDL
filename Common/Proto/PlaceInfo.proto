@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "Vector.proto";
+
+// Name: BNELCAIKODI
+message PlaceInfo {
+    Vector pos = 1;
+    Vector rot = 2;
+}
+

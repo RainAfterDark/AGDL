@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "HomeStakePlayRecord.proto";
+
+// Name: OKKJHIMCIMM
+message HomeStakeRecord {
+    repeated HomeStakePlayRecord record_list = 13;
+}
+

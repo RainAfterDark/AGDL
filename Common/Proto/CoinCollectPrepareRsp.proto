@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 20576
+// Name: NDONAALBHAG
+message CoinCollectPrepareRsp {
+    int32 retcode = 13;
+}
+

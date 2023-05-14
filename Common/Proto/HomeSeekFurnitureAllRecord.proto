@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "HomeSeekFurnitureOneRecord.proto";
+
+// Name: OGMFJCGONHB
+message HomeSeekFurnitureAllRecord {
+    repeated HomeSeekFurnitureOneRecord record_list = 12;
+}
+

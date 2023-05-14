@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8606
+// Name: DEJPLOKCHLE
+message EchoShellTakeRewardRsp {
+    uint32 reward_id = 8;
+    int32 retcode = 10;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8095
+// Name: NEDABGEDHJO
+message CrystalLinkRestartDungeonRsp {
+    int32 retcode = 11;
+}
+

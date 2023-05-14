@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8535
+// Name: MIBGIHLGKIE
+message MichiaeMatsuriInteractStatueRsp {
+    int32 retcode = 12;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "DKFDACEPNAL.proto";
+
+// Name: AKFPAANICKG
+message AKFPAANICKG {
+    repeated DKFDACEPNAL level_info_list = 3;
+}
+

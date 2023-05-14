@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 6230
+// Name: ANLCNPLLCCH
+message LikeCustomDungeonRsp {
+    int32 retcode = 13;
+}
+

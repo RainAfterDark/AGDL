@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 5826
+// Name: ONFJLHLBGOB
+message FishCastRodRsp {
+    int32 retcode = 5;
+}
+

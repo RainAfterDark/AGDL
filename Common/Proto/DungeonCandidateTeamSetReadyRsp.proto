@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 974
+// Name: KBHOKIKGICJ
+message DungeonCandidateTeamSetReadyRsp {
+    int32 retcode = 5;
+}
+

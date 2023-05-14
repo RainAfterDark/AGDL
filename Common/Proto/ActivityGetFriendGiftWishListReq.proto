@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8391
+// Name: HFHGNLCCCMO
+message ActivityGetFriendGiftWishListReq {
+    uint32 schedule_id = 5;
+}
+

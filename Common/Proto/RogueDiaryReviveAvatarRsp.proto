@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8841
+// Name: GILKPCIKPEM
+message RogueDiaryReviveAvatarRsp {
+    int32 retcode = 12;
+}
+

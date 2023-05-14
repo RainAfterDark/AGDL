@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8064
+// Name: DNEDBABLMLJ
+message SummerTimeV2RestartBoatGalleryReq {
+    uint32 gallery_id = 8;
+}
+

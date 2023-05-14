@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 4047
+// Name: FONPLIJKICI
+message SignatureAuditConfigNotify {
+    uint32 submit_limit = 14;
+    bool is_open = 12;
+}
+

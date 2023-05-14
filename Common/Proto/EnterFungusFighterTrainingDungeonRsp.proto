@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 24555
+// Name: NHGJBMKPOJH
+message EnterFungusFighterTrainingDungeonRsp {
+    int32 retcode = 1;
+    uint32 dungeon_id = 11;
+}
+

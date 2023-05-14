@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 22075
+// Name: CDMLPLHIINJ
+message TeamChainTakeCostumeRewardRsp {
+    int32 retcode = 4;
+}
+

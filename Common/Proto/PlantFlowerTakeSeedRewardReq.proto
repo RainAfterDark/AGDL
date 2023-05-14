@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8467
+// Name: FJLEGFGIHPO
+message PlantFlowerTakeSeedRewardReq {
+    uint32 schedule_id = 2;
+}
+

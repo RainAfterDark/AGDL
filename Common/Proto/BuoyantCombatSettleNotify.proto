@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "BuoyantCombatSettleInfo.proto";
+
+// CmdId: 8159
+// Name: EPJHBBCCCED
+message BuoyantCombatSettleNotify {
+    BuoyantCombatSettleInfo settle_info = 9;
+    uint32 gallery_id = 6;
+}
+

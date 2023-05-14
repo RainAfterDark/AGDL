@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "ShopGoods.proto";
+
+// Name: HIDBGEPIKMB
+message BuyGoodsParam {
+    ShopGoods goods = 12;
+    uint32 buy_count = 13;
+}
+

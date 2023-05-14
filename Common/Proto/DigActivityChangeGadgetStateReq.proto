@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8545
+// Name: IMMAPONENCG
+message DigActivityChangeGadgetStateReq {
+    uint32 entity_id = 8;
+}
+

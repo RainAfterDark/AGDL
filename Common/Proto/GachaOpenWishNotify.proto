@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 1541
+// Name: EHEPDPEIEHP
+message GachaOpenWishNotify {
+    uint32 gacha_schedule_id = 14;
+    uint32 gacha_type = 2;
+}
+

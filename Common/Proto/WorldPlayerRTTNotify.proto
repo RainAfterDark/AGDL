@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "PlayerRTTInfo.proto";
+
+// CmdId: 77
+// Name: NDMJPBGJMPF
+message WorldPlayerRTTNotify {
+    repeated PlayerRTTInfo player_rtt_list = 14;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8442
+// Name: PAMMFIELIDA
+message WinterCampEditSnowmanCombinationRsp {
+    int32 retcode = 14;
+}
+

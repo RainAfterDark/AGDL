@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8973
+// Name: KGGPJOOPDAI
+message ReserveRogueDiaryAvatarRsp {
+    int32 retcode = 10;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 6238
+// Name: HHKLOLJJHGP
+message OutStuckCustomDungeonRsp {
+    int32 retcode = 2;
+}
+

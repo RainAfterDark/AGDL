@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "FallSettleInfo.proto";
+
+// Name: KAKKDDJILKM
+message FleurFairFallSettleInfo {
+    bool is_new_record = 8;
+    FallSettleInfo settle_info = 7;
+}
+

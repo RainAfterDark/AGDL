@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "LCMFDAHJIBK.proto";
+
+// Name: HLHOKAPBEBA
+message SandwormCannonDetailInfo {
+    repeated LCMFDAHJIBK JAAFEFLDPLF = 2;
+}
+

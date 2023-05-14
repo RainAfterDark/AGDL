@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: MDOHOGEIKFA
+message SceneGalleryFungusFighterCaptureInfo {
+    bool is_hide_progress = 2;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 221
+// Name: FBJNIGOFFBL
+message SeeMonsterReq {
+    uint32 monster_id = 9;
+}
+

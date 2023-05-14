@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 6220
+// Name: ECKNBLFINEN
+message ChangeCustomDungeonRoomRsp {
+    int32 retcode = 1;
+    uint32 room_id = 11;
+}
+

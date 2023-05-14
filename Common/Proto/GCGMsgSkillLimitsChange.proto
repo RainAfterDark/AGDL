@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "GCGCardSkillLimitsInfo.proto";
+
+// Name: GDPPALNKIAN
+message GCGMsgSkillLimitsChange {
+    repeated GCGCardSkillLimitsInfo COOLNNBMKAC = 6;
+}
+

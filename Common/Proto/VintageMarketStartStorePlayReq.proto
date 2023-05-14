@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 22355
+// Name: EIMNGGAEPGL
+message VintageMarketStartStorePlayReq {
+    uint32 store_round = 14;
+}
+

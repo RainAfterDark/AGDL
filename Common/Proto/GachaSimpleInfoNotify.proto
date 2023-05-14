@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 1572
+// Name: BDINGDMDDAL
+message GachaSimpleInfoNotify {
+    bool is_new = 5;
+}
+

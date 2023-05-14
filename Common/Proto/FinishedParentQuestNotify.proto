@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "ParentQuest.proto";
+
+// CmdId: 476
+// Name: EJHEFMEOPDL
+message FinishedParentQuestNotify {
+    repeated ParentQuest parent_quest_list = 5;
+}
+

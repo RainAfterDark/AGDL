@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 975
+// Name: IEIGFGMPFHG
+message DungeonPlayerDieRsp {
+    int32 retcode = 6;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 4501
+// Name: EJCDPKLEJEP
+message HomePriorCheckNotify {
+    fixed32 end_time = 4;
+}
+

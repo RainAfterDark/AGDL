@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8430
+// Name: LLGLJCIIHNO
+message WinterCampTakeBattleRewardReq {
+    uint32 id = 5;
+}
+

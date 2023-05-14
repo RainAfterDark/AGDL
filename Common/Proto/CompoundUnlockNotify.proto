@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 121
+// Name: COLEEIFDJKE
+message CompoundUnlockNotify {
+    uint32 compound_id = 10;
+}
+

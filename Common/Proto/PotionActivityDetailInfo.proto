@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "PotionStageData.proto";
+
+// Name: JBNODGBKCKE
+message PotionActivityDetailInfo {
+    repeated PotionStageData stage_list = 3;
+}
+

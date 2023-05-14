@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: JMLDAKCKIMF
+message BuoyantCombatDailyInfo {
+    uint32 best_score = 9;
+    uint32 start_time = 5;
+}
+

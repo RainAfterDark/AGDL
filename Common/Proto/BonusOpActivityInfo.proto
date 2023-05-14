@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: IKECAOJEKPH
+message BonusOpActivityInfo {
+    uint32 left_bonus_count = 12;
+}
+

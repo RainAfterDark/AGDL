@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: ELPLKGHKCEL
+message SceneGallerySorushTrialPhotoMatchInfo {
+    bool KCMBHJJNDBI = 13;
+    bool DOFKELOBBGK = 2;
+}
+

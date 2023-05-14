@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 22439
+// Name: GCDEEJOFANE
+message InstableSprayEnterDungeonRsp {
+    int32 retcode = 2;
+    uint32 level_id = 6;
+}
+

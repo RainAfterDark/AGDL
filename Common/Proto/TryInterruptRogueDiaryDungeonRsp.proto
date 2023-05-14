@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8267
+// Name: BENODGEDFLD
+message TryInterruptRogueDiaryDungeonRsp {
+    int32 retcode = 8;
+}
+

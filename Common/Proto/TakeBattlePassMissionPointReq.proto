@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 2645
+// Name: NOFBIGOHAKF
+message TakeBattlePassMissionPointReq {
+    repeated uint32 mission_id_list = 13;
+}
+

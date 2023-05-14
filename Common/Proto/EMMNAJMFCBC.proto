@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 24818
+// Name: EMMNAJMFCBC
+message EMMNAJMFCBC {
+    uint32 level_id = 9;
+}
+

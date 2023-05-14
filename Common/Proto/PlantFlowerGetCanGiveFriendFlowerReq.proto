@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8250
+// Name: ABHJCBPOEFC
+message PlantFlowerGetCanGiveFriendFlowerReq {
+    uint32 schedule_id = 14;
+}
+

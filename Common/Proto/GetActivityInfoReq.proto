@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 2044
+// Name: FAJCGNIBCDO
+message GetActivityInfoReq {
+    repeated uint32 activity_id_list = 3;
+}
+

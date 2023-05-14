@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 741
+// Name: BCGBHBAHONN
+message GetActivityShopSheetInfoReq {
+    uint32 shop_type = 11;
+}
+

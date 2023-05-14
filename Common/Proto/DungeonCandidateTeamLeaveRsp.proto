@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 954
+// Name: DNNABLHCJOK
+message DungeonCandidateTeamLeaveRsp {
+    int32 retcode = 1;
+}
+

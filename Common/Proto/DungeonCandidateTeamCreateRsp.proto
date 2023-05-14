@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 970
+// Name: GGCLDEAGDEL
+message DungeonCandidateTeamCreateRsp {
+    int32 retcode = 14;
+}
+

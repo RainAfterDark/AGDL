@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 50
+// Name: FPKILDGANHL
+message GmTalkNotify {
+    string msg = 7;
+}
+

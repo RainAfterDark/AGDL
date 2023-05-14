@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 5074
+// Name: LPFPJCCBLKI
+message GetReunionPrivilegeInfoReq {
+    uint32 privilege_id = 12;
+}
+

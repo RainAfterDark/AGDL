@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8629
+// Name: IJDLKKOLKFP
+message RogueDiaryCoinAddNotify {
+    uint32 num = 2;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8630
+// Name: HKDMDDFLHND
+message EchoShellTakeRewardReq {
+    uint32 reward_id = 8;
+}
+

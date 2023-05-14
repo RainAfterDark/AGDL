@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 141
+// Name: BAFJOEPPPEA
+message PlayerLogoutNotify {
+    int32 retcode = 1;
+}
+

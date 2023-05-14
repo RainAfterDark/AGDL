@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "Vector.proto";
+
+// Name: BLOJIAMOIOM
+message BLOJIAMOIOM {
+    Vector JJJMAFCNEDH = 3;
+}
+

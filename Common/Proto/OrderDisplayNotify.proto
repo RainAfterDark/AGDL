@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 4126
+// Name: NMJIDCKCBHG
+message OrderDisplayNotify {
+    uint32 order_id = 8;
+}
+

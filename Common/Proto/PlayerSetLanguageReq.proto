@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 188
+// Name: COFPPCENDKD
+message PlayerSetLanguageReq {
+    uint32 language_type = 1;
+}
+

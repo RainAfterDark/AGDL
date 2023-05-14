@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 5489
+// Name: EPHAEALIPIJ
+message DraftOwnerStartInviteReq {
+    uint32 draft_id = 8;
+}
+

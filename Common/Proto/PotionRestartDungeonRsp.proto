@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8126
+// Name: EBBJOPBNHDB
+message PotionRestartDungeonRsp {
+    int32 retcode = 12;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "BreakoutSnapShot.proto";
+
+// Name: GFNHIBJPLLH
+message BreakoutSyncSnapShot {
+    BreakoutSnapShot snap_shot = 15;
+}
+

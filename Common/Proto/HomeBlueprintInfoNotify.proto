@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 4609
+// Name: BNDPLOEOLGM
+message HomeBlueprintInfoNotify {
+    bool PKDOOEMFGDL = 6;
+    bool ADPGCNNFAHJ = 14;
+}
+

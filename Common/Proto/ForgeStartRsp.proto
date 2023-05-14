@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 628
+// Name: CLDDOEALBCJ
+message ForgeStartRsp {
+    int32 retcode = 4;
+}
+

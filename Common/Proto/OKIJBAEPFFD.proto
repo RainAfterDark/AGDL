@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: OKIJBAEPFFD
+message OKIJBAEPFFD {
+    repeated int32 param_list = 5;
+}
+

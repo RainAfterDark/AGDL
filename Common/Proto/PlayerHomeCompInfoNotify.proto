@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "PlayerHomeCompInfo.proto";
+
+// CmdId: 4617
+// Name: BFAIAEEOADP
+message PlayerHomeCompInfoNotify {
+    PlayerHomeCompInfo comp_info = 2;
+}
+

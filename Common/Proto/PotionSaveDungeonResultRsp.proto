@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8524
+// Name: IOLEDMPEMMP
+message PotionSaveDungeonResultRsp {
+    int32 retcode = 14;
+}
+

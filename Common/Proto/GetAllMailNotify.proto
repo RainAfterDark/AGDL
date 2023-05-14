@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 1465
+// Name: GNHCOJIHAOF
+message GetAllMailNotify {
+    bool is_collected = 7;
+}
+

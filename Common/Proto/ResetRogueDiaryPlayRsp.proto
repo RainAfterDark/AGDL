@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8084
+// Name: BFKDOGGBPKO
+message ResetRogueDiaryPlayRsp {
+    int32 retcode = 2;
+}
+

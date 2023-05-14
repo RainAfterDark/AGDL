@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: CIDPEEOGOFC
+message GCGToken {
+    uint32 value = 15;
+    uint32 key = 9;
+}
+

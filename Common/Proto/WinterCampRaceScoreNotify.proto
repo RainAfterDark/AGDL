@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8761
+// Name: LMPKBIBCGNA
+message WinterCampRaceScoreNotify {
+    uint32 max_score = 5;
+    uint32 id = 13;
+}
+

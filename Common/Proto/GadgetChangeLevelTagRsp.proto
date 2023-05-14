@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 806
+// Name: NJBBECLNJOP
+message GadgetChangeLevelTagRsp {
+    int32 retcode = 13;
+}
+

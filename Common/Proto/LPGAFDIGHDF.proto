@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// Name: LPGAFDIGHDF
+message LPGAFDIGHDF {
+    bool HPGBNJHEJEE = 2;
+    uint32 OECJPOKNGNA = 7;
+}
+

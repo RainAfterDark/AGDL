@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 4100
+// Name: GFDDMIJMCEJ
+message ForceAddPlayerFriendReq {
+    uint32 target_uid = 11;
+}
+

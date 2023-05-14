@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8055
+// Name: EFDEDAPCBKP
+message PotionEnterDungeonRsp {
+    int32 retcode = 2;
+}
+

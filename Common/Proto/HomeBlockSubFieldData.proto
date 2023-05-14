@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "Vector.proto";
+
+// Name: INCOBHPDNFA
+message HomeBlockSubFieldData {
+    Vector pos = 7;
+    Vector rot = 5;
+}
+

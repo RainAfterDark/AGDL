@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 20410
+// Name: OHGEMJKDCIH
+message GearActivityStartPlayGearRsp {
+    int32 retcode = 11;
+    uint32 level_id = 4;
+}
+

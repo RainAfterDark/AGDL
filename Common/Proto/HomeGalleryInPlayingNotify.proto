@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 5594
+// Name: ICAJCEJKAEI
+message HomeGalleryInPlayingNotify {
+    uint32 gallery_id = 3;
+}
+

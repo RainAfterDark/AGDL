@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 287
+// Name: FLPNFCLHHNP
+message WorldPlayerReviveRsp {
+    int32 retcode = 2;
+}
+

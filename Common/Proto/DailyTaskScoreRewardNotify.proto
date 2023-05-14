@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 126
+// Name: MJLAMJFMCHJ
+message DailyTaskScoreRewardNotify {
+    uint32 reward_id = 11;
+}
+

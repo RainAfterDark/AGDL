@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 5824
+// Name: HBKIHDOHPPE
+message ExitFishingRsp {
+    int32 retcode = 4;
+}
+

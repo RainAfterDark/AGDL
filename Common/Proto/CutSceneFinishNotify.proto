@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 210
+// Name: NJODLDAMCNA
+message CutSceneFinishNotify {
+    uint32 cutscene_id = 10;
+}
+

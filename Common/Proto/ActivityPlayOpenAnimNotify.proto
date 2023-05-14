@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 2172
+// Name: IBOMHHNFFID
+message ActivityPlayOpenAnimNotify {
+    uint32 activity_id = 12;
+}
+

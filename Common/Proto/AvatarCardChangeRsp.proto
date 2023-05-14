@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 698
+// Name: PACEBKOHMDJ
+message AvatarCardChangeRsp {
+    int32 retcode = 10;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 20487
+// Name: IHGNKCPJCPO
+message FungusFighterClearTrainingRuntimeDataReq {
+    uint32 dungeon_id = 2;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 4536
+// Name: IGHDJPCKECO
+message HomeSceneInitFinishRsp {
+    int32 retcode = 14;
+}
+

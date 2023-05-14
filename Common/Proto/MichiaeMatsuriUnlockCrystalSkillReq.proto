@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8006
+// Name: GDMAJNCEDPO
+message MichiaeMatsuriUnlockCrystalSkillReq {
+    uint32 crystal_skill_id = 15;
+}
+

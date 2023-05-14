@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 965
+// Name: DPEAFCEFGCN
+message DungeonShowReminderNotify {
+    uint32 reminder_id = 14;
+}
+

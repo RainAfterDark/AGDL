@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "GCGEndReason.proto";
+
+// Name: IAKOPEJNCLO
+message GCGMsgGameOver {
+    GCGEndReason end_reason = 11;
+    uint32 win_controller_id = 4;
+}
+

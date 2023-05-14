@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 23230
+// Name: GDKNNJKAGHF
+message EnterFungusFighterTrainingDungeonReq {
+    uint32 dungeon_id = 4;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 262
+// Name: GMAEFKDKCLJ
+message JoinPlayerFailNotify {
+    int32 retcode = 8;
+}
+

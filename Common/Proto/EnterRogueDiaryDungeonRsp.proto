@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 8609
+// Name: APKFMOIFONL
+message EnterRogueDiaryDungeonRsp {
+    int32 retcode = 1;
+}
+

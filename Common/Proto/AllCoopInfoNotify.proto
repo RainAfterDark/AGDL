@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "MainCoop.proto";
+
+// CmdId: 1959
+// Name: JHBLHOOJBKF
+message AllCoopInfoNotify {
+    repeated MainCoop main_coop_list = 2;
+}
+

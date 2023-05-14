@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+
+// CmdId: 5013
+// Name: AFMNLNAKKBN
+message ReadPrivateChatReq {
+    uint32 target_uid = 7;
+}
+

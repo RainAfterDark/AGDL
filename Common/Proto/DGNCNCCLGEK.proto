@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "Vector.proto";
+
+// Name: DGNCNCCLGEK
+message DGNCNCCLGEK {
+    Vector target_pos = 10;
+    Vector HKBOHPAPLMF = 14;
+}
+

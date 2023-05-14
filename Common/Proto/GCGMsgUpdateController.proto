@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "Uint32Pair.proto";
+
+// Name: ADBCPAJHOHK
+message GCGMsgUpdateController {
+    repeated Uint32Pair allow_controller_map = 4;
+}
+

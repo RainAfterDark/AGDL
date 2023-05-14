@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "Common.Protobuf";
+
+import "GCGDuel.proto";
+
+// CmdId: 7088
+// Name: ACPDBCOLLIM
+message GCGAskDuelRsp {
+    GCGDuel duel = 3;
+    int32 retcode = 7;
+}
+
