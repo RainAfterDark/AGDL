@@ -3,8 +3,18 @@ name: Publish .NET
 on:
   push:
     branches: [ "master" ]
+    paths:
+      - "**.cs"
+      - "**.csproj"
+      - "**.json"
+      - "**.yml"
   pull_request:
     branches: [ "master" ]
+    paths:
+      - "**.cs"
+      - "**.csproj"
+      - "**.json"
+      - "**.yml"
 
 jobs:
   build:
