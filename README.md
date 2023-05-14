@@ -1,6 +1,8 @@
 # AGDL (AnimeGameDamageLogger)
 A console app DamageLogger for a certain AnimeGame.
 
+For ease, you can get the latest build (for win-x64) in the [actions](https://github.com/RainAfterDark/AGDL/actions) tab.
+
 ## How to use
 - Make sure to open the application before starting the game (after this, subsequent restarts of the app/relogging in game should work).
 - Log-in to the game. If you don't see a player log-in message right after the seed is found, please relog-in (This will happen 100% of the time and idk how to fix it yet).
