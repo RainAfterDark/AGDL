@@ -11,6 +11,7 @@ public class CommandManager
         { '2', ("Print Damage Breakdown", (cm) => cm._damageLogger.RenderDamageBreakdown() ) },
         { '3', ("Reset Current Log", (cm) => cm._damageLogger.ResetCurrentLog() ) },
         { '4', ("Reload Config", (cm) => cm._damageLogger.ReloadConfig() ) },
+        { '5', ("Clear Console", (cm) => Console.Clear() ) },
     };
     
     public string CommandsText { get; }

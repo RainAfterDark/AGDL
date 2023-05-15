@@ -16,6 +16,7 @@ public sealed class CustomConsole
     public readonly ConsoleFooterSink FooterPre = new();
     public readonly ConsoleFooterSink FooterPost = new();
 
+    private const int IBUFFER_HEIGHT_STEP = 100;
     private int _previousLineCount;
     private string? _footerText;
     public string? FooterText
@@ -56,6 +57,14 @@ public sealed class CustomConsole
     {
         lock (Console.Out)
         {
+            if (Console.BufferHeight - Console.CursorTop <= IBUFFER_HEIGHT_STEP)
+            {
+                if (OperatingSystem.IsWindows())
+                    Console.BufferHeight += IBUFFER_HEIGHT_STEP;
+                else
+                    Console.Clear();
+            }
+
             var previousTop = Console.CursorTop;
             if (FooterText is not null)
             {

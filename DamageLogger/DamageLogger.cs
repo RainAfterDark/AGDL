@@ -84,6 +84,7 @@ public class DamageLogger
 
     public void RenderDamageBreakdown()
     {
+        if (_entityManager.CurrentTeam.Count == 0) return;
         _consoleLogger.RenderDamageBreakdown(_entityManager.CurrentTeam, TotalLoggingTimeSeconds);
         if (_fileLogger.AbsFilePath is null) return;
         Log.Information("Logs written to: {LogFilePath}", _fileLogger.AbsFilePath);
@@ -107,8 +108,9 @@ public class DamageLogger
     private bool IsEntityFiltered(BaseEntity? entity)
     {
         var shouldLog = _config.DamageToEntityFilters;
-        return (entity is MonsterEntity && !shouldLog.ToMonsters) 
-               || (entity is AvatarEntity && !shouldLog.ToAvatars)
+        return (entity is AvatarEntity && 
+                (!shouldLog.ToAvatars || !_entityManager.CurrentTeam.Contains(entity)))
+               || (entity is MonsterEntity && !shouldLog.ToMonsters)
                || (entity is GadgetEntity && !shouldLog.ToGadgets)
                || (entity is WeaponEntity && !shouldLog.ToWeapons);
     }
@@ -162,6 +164,11 @@ public class DamageLogger
         
         attacker ??= _entityManager.GetEntity(attackResult.AttackerId);
         if (attacker is null) return;
+        var originalAttacker = attacker;
+        attacker = _entityManager.GetRootOwnerEntity(attacker);
+        // Some late hits can appear when the team has already switched, so we prevent that
+        // Usually happens in abyss (going from the 1st to 2nd half)
+        if (attacker is AvatarEntity && !_entityManager.CurrentTeam.Contains(attacker)) return;
         
         // On first hit
         if (_firstHitTimestamp == 0)
@@ -173,8 +180,6 @@ public class DamageLogger
         }
         _lastHitTimestamp = attackResult.AttackTimestampMs;
         
-        var originalAttacker = attacker;
-        attacker = _entityManager.GetRootOwnerEntity(attacker);
         string? damageSource = null;
         var attackType = AttackType.Unknown;
         

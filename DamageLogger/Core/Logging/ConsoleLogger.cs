@@ -122,10 +122,10 @@ public class ConsoleLogger
             var table = new Table()
                 .Title(GetAvatarDamageText(avatar, teamDamage, loggingSeconds))
                 .AddColumn("Damage Source")
+                .AddColumn("Count")
                 .AddColumn("Damage")
                 .AddColumn("DPS")
-                .AddColumn("Ratio")
-                .AddColumn("Count");
+                .AddColumn("Ratio");
             
             foreach (var (source, data) in avatar.CombatManager.DamageDealtMap)
             {
@@ -133,10 +133,10 @@ public class ConsoleLogger
                 var ratio = data.damage.SafeDivision(totalDamage);
                 table.AddRow(
                     $"[{Theme.Colors.Source}]{source}[/]", 
+                    $"[{Theme.Colors.Count}]x{data.count}[/]",
                     $"[{Theme.Colors.Damage}]{data.damage:N}[/]", 
                     $"[{Theme.Colors.Dps}]{dps:N}/s[/]", 
-                    $"[{Theme.Colors.Ratio}]{ratio:P}[/]", 
-                    $"[{Theme.Colors.Count}]x{data.count}[/]");
+                    $"[{Theme.Colors.Ratio}]{ratio:P}[/]");
             }
             tables.Enqueue(table);
         }
