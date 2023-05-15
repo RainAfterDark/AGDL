@@ -26,8 +26,8 @@ public class CommandManager
     {
         while (!_shouldCancel)
         {
-            var info = Console.ReadKey(true);
             if (!_damageLogger.PlayerLoggedIn) continue;
+            var info = Console.ReadKey(true);
             if (_commands.TryGetValue(info.KeyChar, out var cmdInfo))
                 cmdInfo.action(this);
         }
