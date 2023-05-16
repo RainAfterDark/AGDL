@@ -30,8 +30,3 @@ jobs:
       with:
         name: DamageLogger
         path: /home/runner/work/AGDL/AGDL/DamageLogger/bin/Release/net7.0/win-x64/publish/
-        
-    - name: Create Release
-      uses: softprops/action-gh-release@v0.1.15
-      with:
-        files: /home/runner/work/AGDL/AGDL/DamageLogger/bin/Release/net7.0/win-x64/publish/
