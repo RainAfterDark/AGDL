@@ -10,9 +10,9 @@ public class MonsterEntity : BaseEntity
     public override string Name => $"{EntityId.ToString()[5..]} {Data?.Name}";
 
     public MonsterEntity(uint entityId, SceneMonsterInfo monster)
+        : base(entityId, monster.MonsterId)
     {
-        EntityId = entityId;
-        MonsterData.DataDict.TryGetValue(monster.MonsterId, out var monsterData);
+        MonsterData.DataDict.TryGetValue(ConfigId, out var monsterData);
         Data = monsterData;
     }
 }

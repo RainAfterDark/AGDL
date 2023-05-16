@@ -15,10 +15,9 @@ public class WeaponEntity : BaseEntity
             : GadgetId.ToString());
 
     public WeaponEntity(SceneWeaponInfo weapon, uint ownerId)
+        : base(weapon.EntityId, weapon.ItemId)
     {
-        EntityId = weapon.EntityId;
         OwnerId = ownerId;
-        ConfigId = weapon.ItemId;
         WeaponData.DataDict.TryGetValue(ConfigId, out var weaponData);
         Data = weaponData;
         GadgetId = weapon.GadgetId;

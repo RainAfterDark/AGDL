@@ -5,8 +5,6 @@ namespace DamageLogger.Core.Entity;
 
 public class AvatarEntity : BaseEntity
 {
-    private readonly Dictionary<uint, string> _abilities = new();
-    
     public override AvatarData? Data { get; }
 
     public override string Name
@@ -14,16 +12,15 @@ public class AvatarEntity : BaseEntity
         get
         {
             var name = Data?.Name ?? ConfigId.ToString();
-            if (!name.Contains(" ")) return name;
-            var split = name.Split(" ");
-            return split[0].Length <= 3 ? string.Join(" ", split) : split[1];
+            if (!name.Contains(' ')) return name;
+            var split = name.Split(' ');
+            return split.First().Length <= 3 ? string.Join(' ', split) : split.Last();
         }
     }
 
     public AvatarEntity(SceneTeamAvatar avatar)
+        : base(avatar.EntityId, avatar.SceneEntityInfo.Avatar.AvatarId)
     {
-        EntityId = avatar.EntityId;
-        ConfigId = avatar.SceneEntityInfo.Avatar.AvatarId;
         AvatarData.DataDict.TryGetValue(ConfigId, out var avatarData);
         Data = avatarData;
         AbilityManager.UpdateAbilities(avatar.AbilityControlBlock);
