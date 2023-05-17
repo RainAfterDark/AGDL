@@ -21,7 +21,7 @@ public class DamageLoggerConfig : Config
 
     public string LogDirectory { get; set; } = "DamageLogs";
     public ConsoleLogMode ConsoleLoggingMode { get; set; } = ConsoleLogMode.Table;
-    public bool LogCharacterSwap { get; set; } = true;
+    public bool LogCharacterSwap { get; set; } = false;
     public DamageToEntityFilter DamageToEntityFilters { get; set; } = new();
     
     public void Update(DamageLoggerConfig newConfig)
