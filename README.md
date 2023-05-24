@@ -1,7 +1,7 @@
 # AGDL (Anime Game Damage Logger)
 A console app damage logger for a certain anime game.
 
-For ease, you can get the latest build (for win-x64) in the [actions](https://github.com/RainAfterDark/AGDL/actions) tab.
+You can get the latest version in [releases](https://github.com/RainAfterDark/AGDL/releases) or the latest build in the [actions](https://github.com/RainAfterDark/AGDL/actions) tab (both for win-x64).
 
 ## How to use
 - Make sure to open the application before starting the game (after this, subsequent restarts of the app/relogging in game should work).
