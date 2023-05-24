@@ -1,11 +1,11 @@
-# AGDL (AnimeGameDamageLogger)
-A console app DamageLogger for a certain AnimeGame.
+# AGDL (Anime Game Damage Logger)
+A console app damage logger for a certain anime game.
 
 For ease, you can get the latest build (for win-x64) in the [actions](https://github.com/RainAfterDark/AGDL/actions) tab.
 
 ## How to use
 - Make sure to open the application before starting the game (after this, subsequent restarts of the app/relogging in game should work).
-- Log-in to the game. If you don't see a player log-in message right after the seed is found, please relog-in (This will happen 100% of the time and idk how to fix it yet).
+- Log-in to the game. If you don't see a player log-in message right after the seed is found, please relog-in.
   - If you don't see a seed found message, let alone a server handshake, the network interface you're listening to probably isn't used by the game (either you have multiple adapters or you're using a VPN). If this is the case, change the `ChooseInterface` setting in the generated `config.json` to true, restart the app, and manually choose the correct interface.
 - If you did see a player log-in message, and the team updated, then congrats, it works.
 
@@ -18,5 +18,5 @@ Another crucial thing is that **electro-charged reactions still aren't associate
 
 ## Many thanks to
 - Original project [DNTK](https://github.com/Crepe-Inc/DNTK) and its contributors
-- Crepe and Kyoko for protos
+- Crepe + Slushy teams for protos
 - Dim for GenshinData

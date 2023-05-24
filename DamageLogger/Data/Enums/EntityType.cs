@@ -75,5 +75,8 @@ public enum EntityType
 	Partner = 70,
 	DeshretObeliskGadget = 71,
 	CoinCollectLevelGadget = 72,
+	UgcSpecialGadget = 73,
+	UgcTowerLevelUpGadget = 74,
+	JourneyGearOperatorGadget = 75,
 	PlaceHolder = 99,
 }

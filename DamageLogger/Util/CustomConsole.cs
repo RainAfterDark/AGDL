@@ -94,4 +94,12 @@ public sealed class CustomConsole
             WriteFooter();
         }
     }
+
+    public void Clear()
+    {
+        lock (Console.Out)
+        {
+            Console.Clear();
+        }
+    }
 }

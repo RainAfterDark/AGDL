@@ -42,9 +42,9 @@ public class EntityManager
             return LevelEntity;
         switch (GetEntityType(entityId))
         {
-            case ProtEntityType.ProtEntityTeam:
+            case ProtEntityType.Team:
                 return TeamEntity;
-            case ProtEntityType.ProtEntityMpLevel:
+            case ProtEntityType.MpLevel:
                 return MpLevelEntity;
             default:
                 _entities.TryGetValue(entityId, out var entity);

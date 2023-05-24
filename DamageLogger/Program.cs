@@ -1,7 +1,7 @@
 ﻿using DamageLogger.Extensions;
 using Serilog;
 
-const string gameVersion = "3.6.0";
+const string gameVersion = "3.7.0";
 const string configPath = "config.json";
 
 Console.CursorVisible = false;
@@ -10,6 +10,6 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.ConsoleWithFooter()
     .CreateLogger();
 
-Log.Information("DamageLogger for AnimeGame version {GameVersion}", gameVersion);
+Log.Information("Damage Logger for Anime Game version {GameVersion}", gameVersion);
 var damageLogger = new DamageLogger.DamageLogger(configPath);
 damageLogger.Run();

@@ -28,21 +28,10 @@ public class DamageLogger
     private readonly string _configPath;
     private uint _firstHitTimestamp;
     private uint _lastHitTimestamp;
-    private bool _isLogging = true;
 
     private uint TotalLoggingTimeMs => _lastHitTimestamp - _firstHitTimestamp;
     private float TotalLoggingTimeSeconds => (float)TotalLoggingTimeMs / 1000;
-    
     public bool PlayerLoggedIn { get; private set; }
-    public bool IsLogging
-    {
-        get => _isLogging;
-        set
-        {
-            _isLogging = value;
-            _consoleLogger.IsLogging = value;
-        }
-    }
 
     public DamageLogger(string configPath)
     {
@@ -71,7 +60,7 @@ public class DamageLogger
 
     public void Run()
     {
-        Console.CancelKeyPress += (_, __) => Close();
+        Console.CancelKeyPress += (_, _) => Close();
         _dnToolKit.RunAsync().ConfigureAwait(false);
         _commandManager.RunLoop();
     }
@@ -80,6 +69,11 @@ public class DamageLogger
     {
         _dnToolKit.Close();
         _commandManager.Close();
+    }
+
+    public void ToggleConsoleLogging()
+    {
+        _consoleLogger.IsLogging = !_consoleLogger.IsLogging;
     }
 
     public void RenderDamageBreakdown()
@@ -94,7 +88,7 @@ public class DamageLogger
     {
         foreach (var avatar in _entityManager.CurrentTeam) avatar.CombatManager.Reset();
         _consoleLogger.UpdateCurrentTeamDamageText(_entityManager.CurrentTeam, TotalLoggingTimeSeconds);
-        Log.Information("Stats for current team has been reset");
+        Log.Information("Statistics for current team has been reset");
         _fileLogger.UpdateTeam(_entityManager.CurrentTeam);
     }
 
@@ -118,8 +112,6 @@ public class DamageLogger
     private void ProcessEvtBeingHitInfo(EvtBeingHitInfo info)
     {
         var receiveTime = DateTime.Now;
-        if (!IsLogging) return;
-        
         var attackResult = info.AttackResult!;
         var defender = _entityManager.GetEntity(attackResult.DefenseId);
         if (defender is null || IsEntityFiltered(defender)) return;
@@ -222,7 +214,7 @@ public class DamageLogger
         {
             switch (entry.ArgumentType)
             {
-                case CombatTypeArgument.CombatEvtBeingHit:
+                case CombatTypeArgument.EvtBeingHit:
                     ProcessEvtBeingHitInfo(EvtBeingHitInfo.Parser.ParseFrom(entry.CombatData));
                     break;
             }
@@ -254,6 +246,7 @@ public class DamageLogger
 
     private void ProcessAbilityMetaTriggerElementReaction(AbilityInvokeEntry entry)
     {
+        if (!_config.UseTriggerReactionInvocations) return;
         var data = AbilityMetaTriggerElementReaction.Parser.ParseFrom(entry.AbilityData);
         _entityManager.GetEntity(entry.EntityId)?.AbilityManager.UpdateReactionSource(data);
     }
@@ -264,18 +257,17 @@ public class DamageLogger
         {
             switch (entry.ArgumentType)
             {
-                case AbilityInvokeArgument.AbilityMetaAddNewAbility:
+                case AbilityInvokeArgument.MetaAddNewAbility:
                     ProcessAbilityMetaAddNewAbility(entry);
                     break;
-                case AbilityInvokeArgument.AbilityMetaModifierChange:
+                case AbilityInvokeArgument.MetaModifierChange:
                     ProcessAbilityMetaModifierChange(entry);
                     break;
-                case AbilityInvokeArgument.AbilityMetaUpdateBaseReactionDamage:
+                case AbilityInvokeArgument.MetaUpdateBaseReactionDamage:
                     ProcessAbilityMetaUpdateBaseReactionDamage(entry);
                     break;
-                case AbilityInvokeArgument.AbilityMetaTriggerElementReaction:
-                    // May or may not be needed
-                    //ProcessAbilityMetaTriggerElementReaction(entry);
+                case AbilityInvokeArgument.MetaTriggerElementReaction:
+                    ProcessAbilityMetaTriggerElementReaction(entry);
                     break;
             }
         }
@@ -315,8 +307,8 @@ public class DamageLogger
     
     private void OnAvatarSwapped(object? _, AvatarEntity avatar)
     {
-        if (_config.LogCharacterSwap)
-            Log.Information("Swap to {Avatar}", avatar.Name);
+        if (!_config.LogCharacterSwap || !_consoleLogger.IsLogging) return;
+        Log.Information("Swap to {Avatar}", avatar.Name);
     }
 
     private void OnPreTeamUpdate(object? _, ReadOnlyCollection<AvatarEntity> previousTeam)

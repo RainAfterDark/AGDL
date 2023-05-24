@@ -48,7 +48,7 @@ public class ConsoleLogger
     {
         var loggingColor = IsLogging ? Theme.Colors.On : Theme.Colors.Off;
         var loggingText = $"[bold {loggingColor}]{(IsLogging ? "ON " : "OFF")}[/]";
-        _console.FooterText = $"Logging: {loggingText} | {CurrentTeamDamageText}\n{CommandsText}";
+        _console.FooterText = $"Console Logging: {loggingText} | {CurrentTeamDamageText}\n{CommandsText}";
     }
 
     private float GetTotalTeamDamage(IEnumerable<AvatarEntity> team)
@@ -67,12 +67,14 @@ public class ConsoleLogger
 
     public void RenderHitInfoHeader()
     {
+        if (!IsLogging) return;
         _console.Render(new Rule());
         _console.WriteLine(HitInfo.GetHeaderRow());
     }
     
     public void RenderHitInfo(HitInfo hitInfo)
     {
+        if (!IsLogging) return;
         switch (_config.ConsoleLoggingMode)
         {
             case DamageLoggerConfig.ConsoleLogMode.Friendly:
@@ -127,7 +129,9 @@ public class ConsoleLogger
                 .AddColumn("DPS")
                 .AddColumn("Ratio");
             
-            foreach (var (source, data) in avatar.CombatManager.DamageDealtMap)
+            foreach (var (source, data) in 
+                     avatar.CombatManager.DamageDealtMap
+                           .OrderByDescending(pair => pair.Value.damage))
             {
                 var dps = data.damage.SafeDivision(loggingSeconds);
                 var ratio = data.damage.SafeDivision(totalDamage);
