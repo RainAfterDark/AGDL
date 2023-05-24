@@ -11,10 +11,18 @@ You can get the latest version in [releases](https://github.com/RainAfterDark/AG
 
 Logs should be saved by default in `DamageLogs/<name-of-the-characters-in-your-team>`. These are automatically generated, and a new log will be created every time your team updates (by changing scenes or manually changing your characters). You can also manually reset the log (and create a new one). The console will output logs by default as a table, but in the files they will come in a TSV format. You can use this [sheet](https://docs.google.com/spreadsheets/d/1oHRyBSnGIyMt5oFoOUKOTPwu9zJ3OCaJ4uyTUODp5To/edit?usp=sharing) to format the data and apply filters, etc.
 
-## Some notes
-The damage source column will contain internal names of abilities/gadgets/reactions, which aren't very intuitive. A sort of friendly name translation feature could be added in the future, but it will take a while to map out which name corresponds to which ability/reaction/etc. Feel free to open an issue about this or maybe even a PR.
+## FAQ
+> Is it safe?
 
-Another crucial thing is that **electro-charged reactions still aren't associated properly**, so please double check the logs if you're trying to count or determine who owns which tick. As far as other reactions go, they should be pretty accurate.
+This app is simply built on top of a packet sniffer + decryptor for a particular anime game to capture gameplay data. Nothing is injected/modified into the game.
+
+> Why are the damage source names weird/confusing?
+
+Those are the internal names of abilities/gadgets/reactions extracted from the game. A sort of friendly name translation feature could be added in the future, but it will take a while to map out which name corresponds to which ability/reaction/etc. Feel free to open an issue about this or maybe even a PR.
+
+> Are the logs actually accurate?
+
+This is still subject to testing. One thing however is that **electro-charged reactions aren't associated properly**, so please double check the logs if you're trying to count or determine who owns which tick. As far as other reactions go, they should be pretty accurate.
 
 ## Many thanks to
 - Original project [DNTK](https://github.com/Crepe-Inc/DNTK) and its contributors
