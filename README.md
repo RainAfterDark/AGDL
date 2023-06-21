@@ -3,6 +3,10 @@ A console app damage logger for a certain anime game.
 
 You can get the latest version in [releases](https://github.com/RainAfterDark/AGDL/releases) or the latest build in the [actions](https://github.com/RainAfterDark/AGDL/actions) tab (both for win-x64).
 
+## Prerequisite/s
+
+- [Npcap](https://npcap.com/#download) for windows
+
 ## How to use
 - Make sure to open the application before starting the game (after this, subsequent restarts of the app/relogging in game should work).
 - Log-in to the game. If you don't see a player log-in message right after the seed is found, please relog-in.
