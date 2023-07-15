@@ -1,27 +1,7 @@
-// https://github.com/SlushinPS/beach-simulator
-// Copyright (C) 2023 Slushy Team
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Affero General Public License as
-// published by the Free Software Foundation, either version 3 of the
-// License, or (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Affero General Public License for more details.
-//
-// You should have received a copy of the GNU Affero General Public License
-// along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
 syntax = "proto3";
 option csharp_namespace = "Common.Protobuf";
+
 import "GadgetBornType.proto";
-import "PlatformInfo.proto";
-import "GadgetPlayInfo.proto";
-import "LENNDLOGFIM.proto";
-import "OPEMEOGOHME.proto";
-import "HKILNLMDIGF.proto";
 import "Item.proto";
 import "GatherGadgetInfo.proto";
 import "WorktopInfo.proto";
@@ -44,7 +24,12 @@ import "RoguelikeGadgetInfo.proto";
 import "NightCrowGadgetInfo.proto";
 import "DeshretObeliskGadgetInfo.proto";
 import "CoinCollectOperatorInfo.proto";
-// Obf: GBAFHJBNENJ
+import "PlatformInfo.proto";
+import "GadgetPlayInfo.proto";
+import "JCKEOAENJGA.proto";
+import "COJHCKGPEPH.proto";
+import "KCLPNEDBPKC.proto";
+
 message SceneGadgetInfo {
 	uint32 gadget_id = 1;
 	uint32 group_id = 2;
@@ -52,21 +37,11 @@ message SceneGadgetInfo {
 	uint32 owner_entity_id = 4;
 	GadgetBornType born_type = 5;
 	uint32 gadget_state = 6;
-	uint32 FMINBPFFNBJ = 7;
+	uint32 gadget_type = 7;
 	bool is_show_cutscene = 8;
 	uint32 authority_peer_id = 9;
 	bool is_enable_interact = 10;
-	uint32 AIKNPDNDMDA = 11;
-	uint32 mark_flag = 21;
-	uint32 prop_owner_entity_id = 22;
-	PlatformInfo platform = 23;
-	repeated uint32 interact_uid_list = 24;
-	uint32 draft_id = 25;
-	uint32 CKAMEJBIAMM = 26;
-	GadgetPlayInfo play_info = 100;
-	LENNDLOGFIM NAAPIJKGJNO = 101;
-	OPEMEOGOHME PDCKPMIIAMG = 102;
-	HKILNLMDIGF EIALEFBIJBO = 103;
+	uint32 interact_id = 11;
 	oneof content {
 		Item trifle_item = 12;
 		GatherGadgetInfo gather_gadget = 13;
@@ -91,4 +66,14 @@ message SceneGadgetInfo {
 		DeshretObeliskGadgetInfo deshret_obelisk_gadget_info = 63;
 		CoinCollectOperatorInfo coin_collect_operator_info = 64;
 	}
+	uint32 mark_flag = 21;
+	uint32 prop_owner_entity_id = 22;
+	PlatformInfo platform = 23;
+	repeated uint32 interact_uid_list = 24;
+	uint32 draft_id = 25;
+	uint32 gadget_talk_state = 26;
+	GadgetPlayInfo play_info = 100;
+	JCKEOAENJGA FOCAIHNCHLA = 101;
+	COJHCKGPEPH CEMOFHFNINN = 102;
+	KCLPNEDBPKC CMLDPEGAGHO = 103;
 }

@@ -1,0 +1,6 @@
+syntax = "proto3";
+option csharp_namespace = "Common.Protobuf";
+
+message JCKEOAENJGA {
+	uint32 JLGABJBNNFA = 1;
+}

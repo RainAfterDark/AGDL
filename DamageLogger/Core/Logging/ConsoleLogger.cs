@@ -160,4 +160,9 @@ public class ConsoleLogger
         _console.Render(chart);
         _console.Render(grid);
     }
+
+    public void ClearConsoleFooter()
+    {
+        _console.FooterText = null;
+    }
 }

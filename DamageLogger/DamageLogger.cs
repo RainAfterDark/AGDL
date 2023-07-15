@@ -203,6 +203,7 @@ public class DamageLogger
         defender.CombatManager.TakeDamage(attackResult.Damage);
         _consoleLogger.UpdateCurrentTeamDamageText(_entityManager.CurrentTeam, TotalLoggingTimeSeconds);
         
+        //Log.Debug("{@Data}", attackResult);
         var hitInfo = new HitInfo(attacker, attackType, damageSource, defender, attackResult, receiveTime);
         _consoleLogger.RenderHitInfo(hitInfo);
         _fileLogger.LogHitInfo(hitInfo);
@@ -281,6 +282,7 @@ public class DamageLogger
     private void OnDisconnection(object? _, EventArgs __)
     {
         PlayerLoggedIn = false;
+        _consoleLogger.ClearConsoleFooter();
     }
 
     private void OnPacketReceived(object? _, AnimeGamePacket packet)

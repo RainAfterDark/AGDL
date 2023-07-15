@@ -52,8 +52,6 @@ namespace DNToolKit.Net
             if (_pCapDevice != null)
                 return;
 
-            Log.Information("SharpPcap {Version}, StartLiveCapture", (object)Pcap.SharpPcapVersion);
-            
             (_pCapDevice, _layers) = _chooseInterface ? ChoosePcapDevice() : GetPcapDevice();
             if (_pCapDevice == null)
                 throw new InvalidOperationException("No PCap device found.");

@@ -31,4 +31,4 @@ This is still subject to testing. One thing however is that **electro-charged re
 ## Many thanks to
 - Original project [DNTK](https://github.com/Crepe-Inc/DNTK) and its contributors
 - Crepe + Slushy teams for protos
-- Dim for GenshinData
+- Dim for AnimeGameData

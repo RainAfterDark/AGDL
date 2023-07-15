@@ -47,6 +47,7 @@ public class AbilityManager
         if (data.AbilityName is null) return;
         var abilityName = GameData.GetStringFromHash(data.AbilityName);
         _reactionSourceMap[abilityName] = data.SourceCasterId;
+        //Log.Debug("{@Data}", data);
     }
 
     public void UpdateReactionSource(AbilityMetaTriggerElementReaction data)
@@ -54,6 +55,7 @@ public class AbilityManager
         // This is such a hack lol
         var abilityName = $"ElementAbility_{(ElementReactionType)data.ElementReactionType}";
         _reactionSourceMap[abilityName] = data.TriggerEntityId;
+        //Log.Debug("{@Data}", data);
     }
 
     public uint? GetReactionSourceId(ReactionInfo reactionInfo)

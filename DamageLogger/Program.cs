@@ -1,7 +1,7 @@
 ﻿using DamageLogger.Extensions;
 using Serilog;
 
-const string gameVersion = "3.7.0";
+const string gameVersion = "3.8.0";
 const string configPath = "config.json";
 
 Console.CursorVisible = false;

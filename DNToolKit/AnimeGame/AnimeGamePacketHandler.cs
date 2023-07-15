@@ -70,7 +70,7 @@ namespace DNToolKit.AnimeGame
                         if (sender != Sender.Server)
                             break;
 
-                        Log.Debug("Server Handshake : {Conv}, {Token}", conv, token);
+                        Log.Debug("Server Handshake: {Conv}, {Token}", conv, token);
 
                         _processor.Reset();
 

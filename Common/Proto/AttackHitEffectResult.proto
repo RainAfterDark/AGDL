@@ -15,13 +15,13 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 syntax = "proto3";
-option csharp_namespace = "Common.Protobuf";
-// Obf: PBAFNBPPAND
+option java_package = "emu.grasscutter.net.proto";
+// Obf: NDIFHCACBCI
 message AttackHitEffectResult {
-	float hitHaltTime = 6;
-	float hitHaltTimeScale = 2;
-	float retreatStrength = 14;
-	float airStrength = 13;
-	uint32 IDJFCEPGOOF = 5;
-	uint32 ODEDPMCMFNN = 8;
+	uint32 FLFGCFINALM = 1;
+	float APNCGOGPFPD = 4;
+	uint32 APFAMICGBDK = 8;
+	float PEBHKMAAJJA = 10;
+	float NBPNFGEEMKO = 9;
+	float BGMKHJBHAOB = 15;
 }

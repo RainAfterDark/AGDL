@@ -11,7 +11,7 @@ public class ProtobufFactory
     private static readonly Dictionary<string, MessageParser> Name2ParserDict = new();
     static ProtobufFactory()
     {
-        Assembly assembly = Assembly.GetAssembly(typeof(GetPlayerTokenReq))!;
+        Assembly assembly = Assembly.GetAssembly(typeof(GetPlayerTokenRsp))!;
         var protoClasses = assembly.GetTypes().Where(x => typeof(IMessage).IsAssignableFrom(x));
 
         // _ = enumerable.Select(type =>

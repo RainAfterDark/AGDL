@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "Common.Protobuf";
+
+message KCLPNEDBPKC {
+	uint32 group_id = 1;
+	uint32 guid = 2;
+	uint32 MMHAGACGLCA = 3;
+}
